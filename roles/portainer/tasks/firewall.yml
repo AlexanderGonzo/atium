@@ -1,0 +1,13 @@
+- name: open port
+  ufw:
+    state: enabled
+    rule: allow
+    port: "9000"
+    proto: tcp
+
+- name: open SSH port
+  ufw:
+    state: enabled
+    rule: allow
+    port: "22"
+    proto: tcp

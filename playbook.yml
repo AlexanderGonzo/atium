@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: false
+  remote_user: agonzo
+  vars:
+    pip_install_packages:
+      - name: docker
+    
+    docker_users:
+      - agonzo
+
+  roles:
+    - pip
+    - docker
+    - portainer
