@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  become: false
+  become: true
   remote_user: agonzo
   vars:
     pip_install_packages:
@@ -10,6 +10,14 @@
       - agonzo
 
   roles:
-    - pip
-    - docker
-    - portainer
+    - role: geerlingguy.docker
+      tags:
+        - docker
+
+    - role: geerlingguy.pip
+      tags: 
+        - geerlingguy.pip
+    
+    - role: portainer
+      tags:
+        - portainer

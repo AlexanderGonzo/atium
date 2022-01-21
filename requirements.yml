@@ -1,7 +1,7 @@
 ---
 # Docker and pip role from geerlingguy
 - src: geerlingguy.pip
-  name: pip
+  name: geerlingguy.pip
 - src: geerlingguy.docker
-  name: docker
+  name: geerlingguy.docker
 
